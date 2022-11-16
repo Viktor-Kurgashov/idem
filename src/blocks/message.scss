@@ -1,0 +1,44 @@
+.message--in,
+.message--out {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 22px;
+}
+
+.message--out {
+  flex-direction: row-reverse;
+}
+
+.message__avatar {
+  clip-path: polygon(50% 0, 100% 30%, 82% 100%, 18% 100%, 0% 30%);
+  background: white url('Images/avatar.png') no-repeat 55% 15%;
+  background-size: auto 150%;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.message__text {
+  border-radius: 5px;
+  background: white;
+  padding: 14px 16px 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    border: 5px solid transparent;
+    border-top-color: white;
+    position: absolute;
+    top: 5px;
+  }
+}
+
+.message--in > .message__text::before {
+  border-right-color: white;
+  left: -10px;
+}
+
+.message--out > .message__text::before {
+  border-left-color: white;
+  right: -10px;
+}

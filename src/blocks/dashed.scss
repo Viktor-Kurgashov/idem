@@ -1,0 +1,20 @@
+.dashed {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  column-gap: 10px;
+}
+
+.dashed__left-wrap {
+  flex-basis: 100%;
+}
+
+.dashed__right-wrap {
+  flex-basis: 100%;
+  text-align: right;
+}
+
+.dashed__line {
+  flex-grow: 1;
+  border-top: 1px dashed black;
+}

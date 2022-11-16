@@ -1,0 +1,38 @@
+.fourth {
+  display: grid;
+  grid-template:
+    "a a" 155px
+    "b c" 155px
+    "d e" 155px
+    / var(--col-width) var(--col-width);
+  gap: var(--items-gap);
+}
+
+.fourth__item {
+  background: #FFAA87;
+
+  &--a { grid-area: a; }
+
+  &--b { grid-area: b; }
+
+  &--c {
+    background: #C7ABD4;
+    grid-area: c;
+  }
+
+  &--d { grid-area: d; }
+
+  &--e {
+    background: #F55E62;
+    grid-area: e;
+  }
+}
+
+@media (min-width: 480px) {
+  .fourth {
+    grid-template:
+      "d a a" 155px
+      "e b c" 155px
+      / var(--col-width) var(--col-width) var(--col-width);
+  }
+}

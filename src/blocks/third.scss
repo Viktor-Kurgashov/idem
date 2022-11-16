@@ -1,0 +1,27 @@
+@import './item-image.scss';
+@import './dashed.scss';
+
+.third {
+  display: grid;
+  grid-template:
+    "a c" auto
+    "b c" auto
+    / 1fr var(--col-1-3-width);
+  gap: var(--items-gap);
+}
+
+.third__item {
+  aspect-ratio: 1 / 1;
+  background: #E3EBD3;
+
+  &--a { grid-area: a; }
+
+  &--b { grid-area: b; }
+
+  &--c {
+    grid-area: c;
+    font-family: 'Noto Sans', sans-serif;
+    justify-content: flex-start;
+    row-gap: var(--items-gap);
+  }
+}
